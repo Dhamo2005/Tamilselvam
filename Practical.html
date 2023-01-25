@@ -1,0 +1,79 @@
+<form id="feedbackForm">
+
+  <label for="name">Name:</label>
+
+  <input type="text" id="name" required>
+
+  
+
+  <label for="email">Email:</label>
+
+  <input type="email" id="email" required>
+
+  
+
+  <label for="symposium">Which symposium did you attend?</label>
+
+  <select id="symposium" required>
+
+    <option value="" disabled selected>Select an option</option>
+
+    <option value="symposium1">Symposium 1</option>
+
+    <option value="symposium2">Symposium 2</option>
+
+    <option value="symposium3">Symposium 3</option>
+
+  </select>
+
+  
+
+  <label for="presentation">Which presentation did you find most interesting?</label>
+
+  <input type="text" id="presentation" required>
+
+  
+
+  <label for="feedback">Please provide your feedback:</label>
+
+  <textarea id="feedback" required></textarea>
+
+  
+
+  <label for="suggestions">Do you have any suggestions for future symposiums?</label>
+
+  <textarea id="suggestions"></textarea>
+
+  
+
+  <label for="newsletter">Would you like to subscribe to our newsletter?</label>
+
+  <input type="checkbox" id="newsletter">
+
+  
+
+  <input type="submit" value="Submit">
+
+</form>
+
+<script>
+
+  // Form validation
+
+  var form = document.getElementById("feedbackForm");
+
+  form.addEventListener("submit", function(event) {
+
+    if (form.checkValidity() === false) {
+
+      event.preventDefault();
+
+      event.stopPropagation();
+
+    }
+
+    form.classList.add("was-validated");
+
+  });
+
+</script>
